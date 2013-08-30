@@ -1,5 +1,9 @@
 apply plugin: 'groovy'
 apply plugin: 'idea'
+apply plugin: 'maven'
+
+group    = 'com.seitenbau.utils'
+version  = '0.1.0-SNAPSHOT'
 
 ext.groovyVersion   = "2.0.6"
 ext.gebVersion      = "0.9.0"
