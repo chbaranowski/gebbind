@@ -1,9 +1,9 @@
 # GebBind a Simple Geb Extension
 
-GebBind is a small geb extension for a static type binding.
-Here a simple example for a web binding class and a spock test.
+GebBind is a small geb extension for a static type web binding.
+Here a simple example for a web binding class and a spock based test.
 
-The binding class to bind the spock test to a simple web site:
+The binding class to bind the test to a simple web site:
 
     class SampleBind extends Bind {
 
@@ -29,7 +29,7 @@ The binding class to bind the spock test to a simple web site:
 
     }
 
-here the spock test with full code completion support in a ide like Intellij:
+Here a spock test with full code completion support in a IDE like Intellij:
 
     def "click on button element and enter some text"() {
         given:
@@ -44,3 +44,5 @@ here the spock test with full code completion support in a ide like Intellij:
         sample.nameTextInput.value == 'some name'
     }
 
+More details see the [Sample Spec](https://github.com/tux2323/gebbind/blob/master/src/test/groovy/geb/bind/SampleBindSpec.groovy)
+and the [Sample Bind](https://github.com/tux2323/gebbind/blob/master/src/test/groovy/geb/bind/SampleBind.groovy) class.
