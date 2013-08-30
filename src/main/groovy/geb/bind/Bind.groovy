@@ -71,6 +71,14 @@ abstract class Bind {
         new List(selector: selector)
     }
 
+    static Table table(Closure rows) {
+        table(rows: rows)
+    }
+
+    static Table table(Map options) {
+        new Table().configure(options)
+    }
+
     /**
      * The actual used geb browser instance.
      */

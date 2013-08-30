@@ -3,32 +3,57 @@
 <head>
     <title>GebBind-Test</title>
     <script type="text/javascript">
-        function someButtonClicked()
-        {
-          var info = document.createTextNode('some button clicked')
-          document.getElementById('info-text').appendChild(info)
+        function someButtonClicked() {
+            var info = document.createTextNode('some button clicked')
+            document.getElementById('info-text').appendChild(info)
         }
     </script>
 </head>
 <body>
-      <p id="info-text"></p>
-      <form>
-          <p>
-              First Name: <input type="text" name="firstname" >
-          </p>
-          <p>
-              <input type="button" value="some button" name="someButton" onclick="someButtonClicked()">
+<div>
+    <h2>Sample Form</h2>
 
-          </p>
-          <p>
-              <input type="submit" value="Submit" name="submit">
-          </p>
-      </form>
-      <p>
-          <ul>
-            <li>First Element</li>
-            <li>Second Element</li>
-          </ul>
-      </p>
+    <p id="info-text"></p>
+
+    <form>
+        <p>
+            First Name: <input type="text" name="firstname">
+        </p>
+
+        <p>
+            <input type="button" value="some button" name="someButton" onclick="someButtonClicked()">
+
+        </p>
+
+        <p>
+            <input type="submit" value="Submit" name="submit">
+        </p>
+    </form>
+</div>
+<div>
+    <h2>Sample List</h2>
+
+    <p>
+    <ul>
+        <li>First Element</li>
+        <li>Second Element</li>
+    </ul>
+    </p>
+</div>
+<div>
+    <h2>Sample Table</h2>
+    <table>
+        <tr class="header">
+            <td>first name</td>
+            <td>name</td>
+            <td>age</td>
+        </tr>
+        <tr class="row">
+            <td class="name">Max</td>
+            <td class="name">Mustermann</td>
+            <td>42</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

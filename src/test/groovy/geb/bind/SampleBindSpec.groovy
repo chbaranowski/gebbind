@@ -95,4 +95,25 @@ class SampleBindSpec extends GebBindSpec {
         sample.ul[1].text() == 'Second Element'
     }
 
+    def "verify table content on a site"() {
+        given:
+        SampleBind sample = start SampleBind
+        expect:
+        sample.table.size() == 1
+        sample.table[0].size() == 3
+        sample.table[0][0].text() == 'Max'
+        sample.table[0][1].text() == 'Mustermann'
+        sample.table[0][2].text() == '42'
+    }
+
+    def "table filter cells by class"(){
+        given:
+        SampleBind sample = start SampleBind
+        expect:
+        sample.namesTable.size() == 1
+        sample.namesTable[0].size() == 2
+        sample.namesTable[0][0].text() == 'Max'
+        sample.namesTable[0][1].text() == 'Mustermann'
+    }
+
 }

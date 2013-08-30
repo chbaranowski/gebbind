@@ -11,4 +11,14 @@ class List extends BindElement {
         selector().size()
     }
 
+    class ListItem {
+
+        def element
+
+        String text() {
+            element.text()
+        }
+
+    }
+
 }

@@ -30,4 +30,17 @@ class SampleBind extends Bind {
         $('li')
     }
 
+    Table table = table {
+        $('tr').filter('.row')
+    }
+
+    Table namesTable = table (
+        rows: {
+            $('tr').filter('.row')
+        },
+        cells: { row ->
+            row.find('td').filter('.name')
+        }
+    )
+
 }
