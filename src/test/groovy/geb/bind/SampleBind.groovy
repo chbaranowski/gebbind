@@ -26,4 +26,8 @@ class SampleBind extends Bind {
         $('#info-text')
     }
 
+    List ul = list {
+        $('li')
+    }
+
 }

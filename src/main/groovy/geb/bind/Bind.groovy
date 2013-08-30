@@ -62,6 +62,16 @@ abstract class Bind {
     }
 
     /**
+     * Create a new list of web elements.
+     *
+     * @param selector the selector for one or more elements.
+     * @return the new list element.
+     */
+    static List list(Closure selector) {
+        new List(selector: selector)
+    }
+
+    /**
      * The actual used geb browser instance.
      */
     Browser browser

@@ -86,4 +86,13 @@ class SampleBindSpec extends GebBindSpec {
         sample.nameTextInput.value == 'some name'
     }
 
+    def "verify list items on site"() {
+        given:
+        SampleBind sample = start SampleBind
+        expect:
+        sample.ul.size() == 2
+        sample.ul[0].text() == 'First Element'
+        sample.ul[1].text() == 'Second Element'
+    }
+
 }
