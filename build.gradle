@@ -26,3 +26,24 @@ dependencies {
     testCompile "org.eclipse.jetty:jetty-webapp:$jettyVersion"
     testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 }
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+ 
+artifacts {
+  archives sourcesJar
+}
+
+uploadArchives {
+  repositories { 
+    mavenDeployer {
+      repository( url: "https://api.bintray.com/maven/tux2323/utils/gebbind") {
+        authentication(
+            userName: bintray_username, 
+            password: bintray_api_key)
+      }
+    }
+  }
+}
